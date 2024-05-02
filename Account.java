@@ -1,9 +1,9 @@
 /**
  * Account.java
- * <p>
+ *
  * This Account class represents bank accounts that stores money for an owner.
- * <p>
- * Author: Quinn Epstein
+ *
+ * Author: (put your name here)
  */
 class Account
 {
@@ -18,11 +18,12 @@ class Account
         owner = name;
     }
 
-    // Instance methods
-    // Deposits 'amount' into the account
+// Instance methods
+    /** Deposits 'amount' into the account
+     */
     public void deposit(int amount)
     {
-        balance += amount;
+        balance = balance + amount;
     }
 
     /** Withdraws 'amount' from the account.
@@ -32,20 +33,18 @@ class Account
      */
     public void withdraw(int amount)
     {
-        if(amount > balance){
-            System.out.printf("You cannot withdraw $%d%n", amount);
-            return;
-        }
         balance = balance - amount;
     }
 
-    //Returns the balance of the Account
+    /* Returns the balance of the Account
+     */
     public double getBalance()
     {
         return balance;
     }
 
-    // Returns the owner of the Account
+    /* Returns the owner of the Account
+     */
     public String getOwner()
     {
         return owner;
